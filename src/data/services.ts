@@ -4,6 +4,7 @@ export interface Service {
     shortDescription: string;
     description: string;
     icon: string;
+    image: string;
     whatsIncluded: string[];
 }
 
@@ -15,6 +16,7 @@ export const services: Service[] = [
         description:
             "Your kitchen is the heart of your home. We create kitchens that work for your lifestyle—whether you need more storage, better flow, or a complete transformation. From cabinet selection to countertop installation, we handle every detail with precision and care.",
         icon: "chef-hat",
+        image: "/services/images/kitchen.png",
         whatsIncluded: [
             "Custom cabinetry design and installation",
             "Countertop selection and installation (granite, quartz, butcher block)",
@@ -32,6 +34,7 @@ export const services: Service[] = [
         description:
             "Transform your bathroom into a spa-like retreat or a functional family space. We specialize in walk-in showers, updated vanities, and tile work that lasts. Every bathroom we complete is built for daily use and designed to impress.",
         icon: "bath",
+        image: "/services/images/bathroom.png",
         whatsIncluded: [
             "Shower and tub installation (walk-in, freestanding, tub-to-shower conversions)",
             "Vanity and countertop installation",
@@ -49,6 +52,7 @@ export const services: Service[] = [
         description:
             "The right flooring transforms a room. We install tile, luxury vinyl, and hardwood throughout Pittsburgh homes. Our installations are precise, durable, and designed to handle everything from muddy boots to holiday gatherings.",
         icon: "grid-3x3",
+        image: "/services/images/flooring.png",
         whatsIncluded: [
             "Porcelain and ceramic tile installation",
             "Luxury vinyl plank (LVP) flooring",
@@ -66,6 +70,7 @@ export const services: Service[] = [
         description:
             "Good paint and drywall work is the foundation of a finished look. We handle drywall repairs, texture matching, and interior painting with attention to detail. The result is walls that look smooth and professional.",
         icon: "paint-roller",
+        image: "/services/images/painting.png",
         whatsIncluded: [
             "Drywall installation and repair",
             "Texture matching for seamless repairs",
@@ -83,6 +88,7 @@ export const services: Service[] = [
         description:
             "When you're ready for a complete transformation, we coordinate everything. Multiple rooms, full layouts, all finishes—we manage the project from start to finish so you don't have to juggle contractors.",
         icon: "home",
+        image: "/services/images/full-renovation.png",
         whatsIncluded: [
             "Complete project management",
             "Kitchen and bathroom combination projects",

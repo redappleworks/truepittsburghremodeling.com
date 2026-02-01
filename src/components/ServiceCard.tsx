@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ChefHat, Bath, Grid3X3, PaintRoller, Home, ArrowRight } from "lucide-react";
 import { Service } from "@/data/services";
 
@@ -19,43 +20,55 @@ export default function ServiceCard({ service, showDetails = false }: ServiceCar
     const IconComponent = iconMap[service.icon] || Home;
 
     return (
-        <div className="bg-white rounded-2xl border-2 border-charcoal/10 p-6 shadow-card hover:shadow-card-hover transition-shadow">
-            {/* Icon */}
-            <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
-                <IconComponent className="w-6 h-6 text-accent" />
+        <div className="bg-white rounded-2xl border-2 border-charcoal/10 overflow-hidden shadow-card hover:shadow-card-hover transition-shadow">
+            {/* Image */}
+            <div className="relative h-48 w-full">
+                <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                />
+                {/* Icon Badge */}
+                <div className="absolute bottom-3 left-3 w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-md">
+                    <IconComponent className="w-5 h-5 text-accent" />
+                </div>
             </div>
 
-            {/* Title */}
-            <h3 className="text-xl font-bold text-charcoal mb-2">{service.title}</h3>
+            <div className="p-6">
 
-            {/* Description */}
-            <p className="text-charcoal/70 mb-4">
-                {showDetails ? service.description : service.shortDescription}
-            </p>
+                {/* Title */}
+                <h3 className="text-xl font-bold text-charcoal mb-2">{service.title}</h3>
 
-            {/* What's Included */}
-            {showDetails && (
-                <div className="mb-4">
-                    <h4 className="font-semibold text-charcoal mb-2">What&apos;s Included:</h4>
-                    <ul className="space-y-1">
-                        {service.whatsIncluded.map((item, index) => (
-                            <li key={index} className="flex items-start gap-2 text-sm text-charcoal/70">
-                                <span className="text-accent mt-1">•</span>
-                                {item}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            )}
+                {/* Description */}
+                <p className="text-charcoal/70 mb-4">
+                    {showDetails ? service.description : service.shortDescription}
+                </p>
 
-            {/* CTA */}
-            <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 text-accent font-semibold hover:gap-3 transition-all"
-            >
-                Get a Free Estimate
-                <ArrowRight className="w-4 h-4" />
-            </Link>
+                {/* What's Included */}
+                {showDetails && (
+                    <div className="mb-4">
+                        <h4 className="font-semibold text-charcoal mb-2">What&apos;s Included:</h4>
+                        <ul className="space-y-1">
+                            {service.whatsIncluded.map((item, index) => (
+                                <li key={index} className="flex items-start gap-2 text-sm text-charcoal/70">
+                                    <span className="text-accent mt-1">•</span>
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+
+                {/* CTA */}
+                <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 text-accent font-semibold hover:gap-3 transition-all"
+                >
+                    Get a Free Estimate
+                    <ArrowRight className="w-4 h-4" />
+                </Link>
+            </div>
         </div>
     );
 }
