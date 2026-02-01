@@ -10,12 +10,12 @@ const trustItems = [
 export default function TrustBar() {
     return (
         <section className="bg-white/50 py-6 border-y border-charcoal/10">
-            <div className="max-w-3xl mx-auto px-4">
-                <div className="grid grid-cols-2 gap-6 md:gap-8">
+            <div className="max-w-7xl mx-auto px-4">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 md:place-items-center">
                     {trustItems.map((item, index) => (
                         <div
                             key={index}
-                            className="flex items-center justify-center gap-2 text-charcoal/80"
+                            className="flex items-center gap-2 text-charcoal/80 justify-start md:justify-center"
                         >
                             <item.icon className="w-5 h-5 text-accent flex-shrink-0" />
                             <span className="font-medium text-sm md:text-base">{item.label}</span>
