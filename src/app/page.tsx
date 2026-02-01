@@ -16,7 +16,6 @@ import {
     BUSINESS_NAME,
     BUSINESS_TAGLINE,
     BUSINESS_PHONE,
-    PRIMARY_SERVICE_AREA,
 } from "@/lib/config";
 
 export const metadata: Metadata = {
