@@ -32,7 +32,7 @@ export default function Header() {
             <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2">
-                    <span className="text-xl md:text-2xl font-bold text-charcoal">
+                    <span className="text-xl md:text-2xl font-bold text-charcoal font-[family-name:var(--font-playfair)] tracking-tight">
                         {BUSINESS_NAME}
                     </span>
                 </Link>
