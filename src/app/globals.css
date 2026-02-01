@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #FBF6E3;
+  --background: #f5f3f5;
   --foreground: #333333;
 }
 
@@ -19,7 +19,7 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid rgba(228,61,45,1);
+  outline: 2px solid #1b264f;
   outline-offset: 2px;
 }
 
