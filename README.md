@@ -1,36 +1,139 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# True Pittsburgh Remodeling Website
+
+A production-ready marketing website for True Pittsburgh Remodeling, a kitchen & bathroom remodeling contractor in Pittsburgh, PA.
+
+## Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Email**: Resend
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm
+
+### Installation
+
+```bash
+# Install dependencies
+npm install
+```
+
+### Environment Variables
+
+Create a `.env.local` file in the project root:
+
+```env
+# Required: Resend API Key for contact form emails
+RESEND_API_KEY=your_resend_api_key_here
+
+# Optional: Override default contact email
+CONTACT_TO_EMAIL=contact@redappleworks.com
+
+# Optional: Production site URL
+NEXT_PUBLIC_SITE_URL=https://truepittsburghremodeling.com
+```
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+/src
+├── app/                    # Next.js App Router pages
+│   ├── api/contact/        # Contact form API route
+│   ├── about/              # About page
+│   ├── areas/              # Service area pages (local SEO)
+│   │   └── [area]/         # Dynamic area pages
+│   ├── contact/            # Contact/estimate page
+│   ├── portfolio/          # Portfolio pages
+│   │   └── [slug]/         # Project detail pages
+│   ├── reviews/            # Reviews page
+│   ├── services/           # Services page
+│   ├── layout.tsx          # Root layout
+│   ├── page.tsx            # Home page
+│   ├── sitemap.ts          # Dynamic sitemap
+│   └── robots.ts           # Robots.txt
+├── components/             # Reusable React components
+├── data/                   # Static data (projects, reviews, areas, services)
+├── lib/                    # Utilities and config
+└── globals.css             # Global styles
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Key Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Lead Generation**: Prominent CTAs, click-to-call/text, contact form
+- **Portfolio**: Before/after project gallery with lightbox
+- **Reviews**: Testimonials with Google Business Profile link
+- **Local SEO**: 15 area pages with structured data
+- **JSON-LD**: LocalBusiness schema on key pages
+- **Responsive**: Mobile-first design
+- **Accessible**: Focus states, ARIA labels, alt text
 
-## Deploy on Vercel
+## Configuration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Edit `/src/lib/config.ts` to update:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Business name and phone
+- Google Business Profile URL
+- Feature flags (licensed/insured badge)
+- Default metadata
+
+## Customization
+
+### Adding Projects
+
+Edit `/src/data/projects.ts` to add/modify portfolio projects.
+
+### Adding Service Areas
+
+Edit `/src/data/areas.ts` to add/modify service areas.
+
+### Adding Reviews
+
+Edit `/src/data/reviews.ts` to add/modify testimonials.
+
+### Updating Services
+
+Edit `/src/data/services.ts` to modify service offerings.
+
+## Deployment
+
+The site is ready for deployment to Vercel, Netlify, or any Node.js hosting platform.
+
+### Vercel (Recommended)
+
+```bash
+npm i -g vercel
+vercel
+```
+
+Set environment variables in the Vercel dashboard.
+
+## Email Setup (Resend)
+
+1. Sign up at [resend.com](https://resend.com)
+2. Verify your sender domain
+3. Get your API key
+4. Add `RESEND_API_KEY` to environment variables
+
+## License
+
+Private - All rights reserved.

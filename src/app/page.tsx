@@ -1,101 +1,216 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Phone, MessageCircle, ArrowRight } from "lucide-react";
+import ServiceCard from "@/components/ServiceCard";
+import ProjectCard from "@/components/ProjectCard";
+import ReviewCard from "@/components/ReviewCard";
+import TrustBar from "@/components/TrustBar";
+import ProcessSection from "@/components/ProcessSection";
+import LocalSEOBlock from "@/components/LocalSEOBlock";
+import CTAButton from "@/components/CTAButton";
+import JsonLd from "@/components/JsonLd";
+import { services } from "@/data/services";
+import { featuredProjects } from "@/data/projects";
+import { featuredReviews } from "@/data/reviews";
+import {
+    BUSINESS_NAME,
+    BUSINESS_TAGLINE,
+    BUSINESS_PHONE,
+    PRIMARY_SERVICE_AREA,
+} from "@/lib/config";
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+export const metadata: Metadata = {
+    title: `${BUSINESS_NAME} | Kitchen & Bathroom Remodeling in Pittsburgh, PA`,
+    description: BUSINESS_TAGLINE,
+};
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+export default function HomePage() {
+    return (
+        <>
+            <JsonLd type="LocalBusiness" />
+
+            {/* Hero Section */}
+            <section
+                className="relative pt-28 pb-16 md:pt-36 md:pb-24 px-4 min-h-[600px] md:min-h-[700px] flex items-center"
+                style={{
+                    backgroundImage: 'url(/projects/images/herobackground.png)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
+            >
+                {/* Dark overlay for text readability */}
+                <div className="absolute inset-0 bg-black/50"></div>
+
+                <div className="max-w-7xl mx-auto relative z-10">
+                    <div className="max-w-3xl">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                            Kitchen & Bathroom Remodeling in<br />Pittsburgh, PA
+                        </h1>
+                        <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+                            Expert craftsmanship. Stunning results. Your dream space awaits.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <CTAButton href="/contact" size="lg">
+                                Get a Free Estimate
+                            </CTAButton>
+                            <CTAButton
+                                href={`tel:${BUSINESS_PHONE.replace(/[^0-9]/g, "")}`}
+                                variant="outline"
+                                size="lg"
+                                className="border-white text-white hover:bg-white hover:text-charcoal"
+                            >
+                                <Phone className="w-5 h-5 mr-2" />
+                                Call {BUSINESS_PHONE}
+                            </CTAButton>
+                        </div>
+                        <a
+                            href={`sms:${BUSINESS_PHONE.replace(/[^0-9]/g, "")}`}
+                            className="inline-flex items-center gap-2 mt-4 text-white/70 hover:text-white transition-colors"
+                        >
+                            <MessageCircle className="w-5 h-5" />
+                            Or text us at {BUSINESS_PHONE}
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            {/* Trust Bar */}
+            <TrustBar />
+
+            {/* Services Section */}
+            <section className="px-4 py-16 md:py-24">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+                            Our Services
+                        </h2>
+                        <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
+                            From kitchen transformations to bathroom renovations, we handle
+                            every detail of your project.
+                        </p>
+                    </div>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {services.slice(0, 4).map((service) => (
+                            <ServiceCard key={service.id} service={service} />
+                        ))}
+                    </div>
+                    <div className="text-center mt-8">
+                        <Link
+                            href="/services"
+                            className="inline-flex items-center gap-2 text-accent font-semibold hover:gap-3 transition-all"
+                        >
+                            View all services
+                            <ArrowRight className="w-4 h-4" />
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* Featured Projects */}
+            <section className="px-4 py-16 md:py-24 bg-white/50">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+                            Recent Projects
+                        </h2>
+                        <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
+                            See the transformations we&apos;ve completed for Pittsburgh homeowners.
+                        </p>
+                    </div>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {featuredProjects.map((project) => (
+                            <ProjectCard key={project.slug} project={project} />
+                        ))}
+                    </div>
+                    <div className="text-center mt-8">
+                        <Link
+                            href="/portfolio"
+                            className="inline-flex items-center gap-2 text-accent font-semibold hover:gap-3 transition-all"
+                        >
+                            View full portfolio
+                            <ArrowRight className="w-4 h-4" />
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* Process Section */}
+            <section className="px-4 py-16 md:py-24">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+                            How We Work
+                        </h2>
+                        <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
+                            A simple, straightforward process from first call to final walkthrough.
+                        </p>
+                    </div>
+                    <ProcessSection />
+                </div>
+            </section>
+
+            {/* Reviews Section */}
+            <section className="px-4 py-16 md:py-24 bg-white/50">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+                            What Customers Say
+                        </h2>
+                        <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
+                            Real feedback from Pittsburgh homeowners we&apos;ve worked with.
+                        </p>
+                    </div>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {featuredReviews.map((review, index) => (
+                            <ReviewCard key={index} review={review} />
+                        ))}
+                    </div>
+                    <div className="text-center mt-8">
+                        <Link
+                            href="/reviews"
+                            className="inline-flex items-center gap-2 text-accent font-semibold hover:gap-3 transition-all"
+                        >
+                            Read all reviews
+                            <ArrowRight className="w-4 h-4" />
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* Local SEO Block */}
+            <section className="px-4 py-16 md:py-24">
+                <div className="max-w-7xl mx-auto">
+                    <LocalSEOBlock />
+                </div>
+            </section>
+
+            {/* Final CTA */}
+            <section className="px-4 py-16 md:py-24 bg-charcoal text-white">
+                <div className="max-w-4xl mx-auto text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                        Ready to Transform Your Space?
+                    </h2>
+                    <p className="text-xl text-white/70 mb-8">
+                        Get a free, no-obligation estimate for your kitchen or bathroom
+                        remodel. We&apos;ll come to you, discuss your vision, and provide a
+                        detailed proposal.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <CTAButton href="/contact" size="lg">
+                            Get a Free Estimate
+                        </CTAButton>
+                        <CTAButton
+                            href={`tel:${BUSINESS_PHONE.replace(/[^0-9]/g, "")}`}
+                            variant="outline"
+                            size="lg"
+                            className="border-white text-white hover:bg-white hover:text-charcoal"
+                        >
+                            <Phone className="w-5 h-5 mr-2" />
+                            Call {BUSINESS_PHONE}
+                        </CTAButton>
+                    </div>
+                </div>
+            </section>
+        </>
+    );
 }
