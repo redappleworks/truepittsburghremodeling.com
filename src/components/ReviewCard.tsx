@@ -7,7 +7,7 @@ interface ReviewCardProps {
 
 export default function ReviewCard({ review }: ReviewCardProps) {
     return (
-        <div className="bg-white rounded-2xl border-2 border-charcoal/10 p-6 shadow-card hover:shadow-card-hover transition-shadow">
+        <div className="bg-white rounded-2xl border-2 border-charcoal/10 p-6 shadow-card hover:shadow-card-hover transition-shadow h-full flex flex-col">
             {/* Stars */}
             <div className="flex gap-1 mb-4">
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -22,12 +22,12 @@ export default function ReviewCard({ review }: ReviewCardProps) {
             </div>
 
             {/* Quote */}
-            <blockquote className="text-charcoal/80 mb-4 leading-relaxed">
+            <blockquote className="text-charcoal/80 mb-4 leading-relaxed flex-1">
                 &ldquo;{review.text}&rdquo;
             </blockquote>
 
             {/* Author */}
-            <div className="pt-4 border-t border-charcoal/10">
+            <div className="pt-4 border-t border-charcoal/10 mt-auto">
                 <p className="font-semibold text-charcoal">{review.author}</p>
                 <p className="text-sm text-charcoal/60">
                     {review.location} • {review.projectType}
