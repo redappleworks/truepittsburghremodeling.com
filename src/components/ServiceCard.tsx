@@ -29,10 +29,6 @@ export default function ServiceCard({ service, showDetails = false }: ServiceCar
                     fill
                     className="object-cover"
                 />
-                {/* Icon Badge */}
-                <div className="absolute bottom-3 left-3 w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-md">
-                    <IconComponent className="w-5 h-5 text-accent" />
-                </div>
             </div>
 
             <div className="p-6">
