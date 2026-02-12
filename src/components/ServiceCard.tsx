@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ChefHat, Bath, Grid3X3, PaintRoller, Home, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Service } from "@/data/services";
 
 interface ServiceCardProps {
@@ -8,17 +8,7 @@ interface ServiceCardProps {
     showDetails?: boolean;
 }
 
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-    "chef-hat": ChefHat,
-    "bath": Bath,
-    "grid-3x3": Grid3X3,
-    "paint-roller": PaintRoller,
-    "home": Home,
-};
-
 export default function ServiceCard({ service, showDetails = false }: ServiceCardProps) {
-    const IconComponent = iconMap[service.icon] || Home;
-
     return (
         <div className="bg-white rounded-2xl border-2 border-charcoal/10 overflow-hidden shadow-card hover:shadow-card-hover transition-shadow">
             {/* Image */}
