@@ -11,7 +11,7 @@ export const areas: ServiceArea[] = [
         slug: "pittsburgh",
         name: "Pittsburgh",
         county: "Allegheny",
-        description: "As Pittsburgh's trusted kitchen and bathroom remodeling contractor, True Pittsburgh Remodeling serves homeowners throughout the city. From historic row homes in the South Side to modern condos Downtown, we deliver quality craftsmanship tailored to Pittsburgh's unique architecture.",
+        description: "As Pittsburgh's trusted kitchen and bathroom remodeling contractor, Aspen Remodeling serves homeowners throughout the city. From historic row homes in the South Side to modern condos Downtown, we deliver quality craftsmanship tailored to Pittsburgh's unique architecture.",
         highlights: [
             "Serving all Pittsburgh neighborhoods",
             "Experience with historic homes",
@@ -22,7 +22,7 @@ export const areas: ServiceArea[] = [
         slug: "mt-lebanon",
         name: "Mt. Lebanon",
         county: "Allegheny",
-        description: "Mt. Lebanon homeowners trust True Pittsburgh Remodeling for kitchen and bathroom renovations. We understand the character of Lebo homes and deliver updates that blend modern convenience with timeless appeal.",
+        description: "Mt. Lebanon homeowners trust Aspen Remodeling for kitchen and bathroom renovations. We understand the character of Lebo homes and deliver updates that blend modern convenience with timeless appeal.",
         highlights: [
             "Experience with Mt. Lebanon homes",
             "Timeless design approach",
@@ -33,7 +33,7 @@ export const areas: ServiceArea[] = [
         slug: "squirrel-hill",
         name: "Squirrel Hill",
         county: "Allegheny",
-        description: "Squirrel Hill's diverse housing stock—from Tudor homes to mid-century ranches—requires a contractor who understands different styles. True Pittsburgh Remodeling brings that expertise to every kitchen and bathroom project.",
+        description: "Squirrel Hill's diverse housing stock—from Tudor homes to mid-century ranches—requires a contractor who understands different styles. Aspen Remodeling brings that expertise to every kitchen and bathroom project.",
         highlights: [
             "Tudor and period home experience",
             "Diverse architectural knowledge",
@@ -55,7 +55,7 @@ export const areas: ServiceArea[] = [
         slug: "fox-chapel",
         name: "Fox Chapel",
         county: "Allegheny",
-        description: "Fox Chapel homeowners expect the highest quality, and True Pittsburgh Remodeling delivers. We provide premium kitchen and bathroom renovations with meticulous attention to detail and superior materials.",
+        description: "Fox Chapel homeowners expect the highest quality, and Aspen Remodeling delivers. We provide premium kitchen and bathroom renovations with meticulous attention to detail and superior materials.",
         highlights: [
             "Premium materials and finishes",
             "High-end design capability",
@@ -77,7 +77,7 @@ export const areas: ServiceArea[] = [
         slug: "oakland",
         name: "Oakland",
         county: "Allegheny",
-        description: "From student housing to stately homes near Schenley Park, Oakland offers diverse remodeling opportunities. True Pittsburgh Remodeling provides quality renovations for landlords and homeowners alike.",
+        description: "From student housing to stately homes near Schenley Park, Oakland offers diverse remodeling opportunities. Aspen Remodeling provides quality renovations for landlords and homeowners alike.",
         highlights: [
             "Diverse property experience",
             "Investment property updates",
@@ -99,7 +99,7 @@ export const areas: ServiceArea[] = [
         slug: "brookline",
         name: "Brookline",
         county: "Allegheny",
-        description: "Brookline homeowners know the value of a well-maintained home. True Pittsburgh Remodeling helps you update your kitchen or bathroom with renovations that stand the test of time.",
+        description: "Brookline homeowners know the value of a well-maintained home. Aspen Remodeling helps you update your kitchen or bathroom with renovations that stand the test of time.",
         highlights: [
             "Value-focused renovations",
             "Classic home updates",
@@ -143,7 +143,7 @@ export const areas: ServiceArea[] = [
         slug: "sewickley",
         name: "Sewickley",
         county: "Allegheny",
-        description: "Sewickley's charming village atmosphere and upscale homes require a contractor with refined taste. True Pittsburgh Remodeling delivers premium kitchen and bathroom renovations worthy of this prestigious community.",
+        description: "Sewickley's charming village atmosphere and upscale homes require a contractor with refined taste. Aspen Remodeling delivers premium kitchen and bathroom renovations worthy of this prestigious community.",
         highlights: [
             "Upscale home experience",
             "Premium finishes",
@@ -154,7 +154,7 @@ export const areas: ServiceArea[] = [
         slug: "bethel-park",
         name: "Bethel Park",
         county: "Allegheny",
-        description: "Bethel Park families trust True Pittsburgh Remodeling for kitchen and bathroom updates. We help you transform your home into the space your family deserves.",
+        description: "Bethel Park families trust Aspen Remodeling for kitchen and bathroom updates. We help you transform your home into the space your family deserves.",
         highlights: [
             "Family-home focus",
             "Practical design solutions",

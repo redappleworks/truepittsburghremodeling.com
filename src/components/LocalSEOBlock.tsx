@@ -9,7 +9,7 @@ interface LocalSEOBlockProps {
 
 export default function LocalSEOBlock({
     title = "Serving Pittsburgh and Surrounding Areas",
-    description = "True Pittsburgh Remodeling provides quality kitchen and bathroom remodeling throughout Allegheny County.",
+    description = "Aspen Remodeling provides quality kitchen and bathroom remodeling throughout Allegheny County.",
     limit = 12,
 }: LocalSEOBlockProps) {
     const displayAreas = areas.slice(0, limit);

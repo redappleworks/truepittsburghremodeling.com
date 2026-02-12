@@ -190,7 +190,7 @@ export default function AboutPage() {
                 <div className="max-w-7xl mx-auto">
                     <LocalSEOBlock
                         title="Areas We Serve"
-                        description="True Pittsburgh Remodeling serves homeowners throughout Pittsburgh and Allegheny County."
+                        description="Aspen Remodeling serves homeowners throughout Pittsburgh and Allegheny County."
                         limit={15}
                     />
                 </div>

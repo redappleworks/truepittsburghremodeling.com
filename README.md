@@ -1,6 +1,6 @@
-# True Pittsburgh Remodeling Website
+# Aspen Remodeling Website
 
-A production-ready marketing website for True Pittsburgh Remodeling, a kitchen & bathroom remodeling contractor in Pittsburgh, PA.
+A production-ready marketing website for Aspen Remodeling, a kitchen & bathroom remodeling contractor in Pittsburgh, PA.
 
 ## Tech Stack
 
@@ -35,7 +35,7 @@ RESEND_API_KEY=your_resend_api_key_here
 CONTACT_TO_EMAIL=contact@redappleworks.com
 
 # Optional: Production site URL
-NEXT_PUBLIC_SITE_URL=https://truepittsburghremodeling.com
+NEXT_PUBLIC_SITE_URL=https://aspenremodeling.com
 ```
 
 ### Development
